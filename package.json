@@ -1,6 +1,6 @@
 {
   "name": "react-object-table-viewer",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "react object table ui",
   "main": "out/cjs",
   "module": "esm",

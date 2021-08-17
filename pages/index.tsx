@@ -26,9 +26,13 @@ const index: FC<PropTypes> = (props: PropTypes) => {
         href="https://github.com/jinkwon/react-object-table-viewer">https://github.com/jinkwon/react-object-table-viewer</a>
     </div>
     <h3>Example</h3>
+
+
     <ReactObjectTableViewer
+      className={'table'}
+      layout={'horizontal'}
       style={{
-        fontSize: '12px',
+        fontSize: '20px',
       }}
       data={data} />
 
