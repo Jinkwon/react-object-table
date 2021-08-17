@@ -2,7 +2,7 @@
   "name": "react-object-table-viewer",
   "author": "jinkwon.lee <uzmystic@gmail.com>",
   "license": "MIT",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "react object table ui",
   "main": "out/cjs",
   "module": "esm",

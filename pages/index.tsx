@@ -1,20 +1,33 @@
 import React, {
   FC,
-  ReactNode
 } from 'react';
 import ReactObjectTableViewer from '../src';
 import packages from '../package.json';
 import CodeBlock from './components/CodeBlock';
 
-interface PropTypes {
-  children?: ReactNode;
-}
-
-const index: FC<PropTypes> = (props: PropTypes) => {
+const index: FC = () => {
   const data = {
     hello: 'world',
     abc: 123,
-    array: ['1', '2', '3'],
+    users: ['John', 'Jeff', 'Sam'],
+    dataArray: [
+      {
+        userName: 'John',
+      },
+      {
+        userName: 'Jeff',
+      },
+      {
+        userName: 'Sam',
+      },
+    ],
+    data: {
+      b: {
+        c: 3,
+        d: 4,
+        e: [1, 'a', 2, 'b', 3, 'c']
+      }
+    }
   };
 
   return <>
@@ -42,7 +55,7 @@ export interface PropTypes {
 <ReactObjectTableViewer
   layout={'vertical'}
   style={{
-    border: '1px solid #ccc',
+    border: '1px solid #ccc'
   }}
   keyStyle={{
     color: '#ff0000'

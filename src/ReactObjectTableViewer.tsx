@@ -15,11 +15,11 @@ export interface PropTypes {
 
 const ReactObjectTableViewer: FC<PropTypes> = (props: PropTypes) => {
   const opt = {
-    layout: 'vertical',
+    layout: 'vertical' as TableViewerLayoutType,
     ...props,
   };
 
-  const data = opt.data;
+  const data: any = opt.data;
   const keys: string[] = Object.keys(data || {}) || [];
 
   return (
@@ -29,49 +29,63 @@ const ReactObjectTableViewer: FC<PropTypes> = (props: PropTypes) => {
         ...opt.style,
       }}
     >
-      <tbody>
-      {opt.layout === 'vertical' && keys.map((k, key) => (
-        <tr key={key}>
-          <td
-            style={{
-              fontWeight: 'bold',
-              marginRight: 10,
-              ...opt.keyStyle,
-            }}
-          >{k}</td>
-          <td
-            style={{
-              whiteSpace: 'nowrap',
-              ...opt.valueStyle,
-            }}
-          >{`${data[k]}`}</td>
-        </tr>
-      ))}
+      {opt.layout === 'vertical' && (
+        <tbody>
+        {keys.map((k, key) => {
+          const val: any = data[k];
+          const isObject: boolean = typeof val === 'object';
 
-      {opt.layout === 'horizontal' && (
-        <>
-          <tr>
-            {keys.map((k, key) => (<td
-              key={key}
+          return <tr key={key}>
+            <th
               style={{
                 fontWeight: 'bold',
                 marginRight: 10,
                 ...opt.keyStyle,
               }}
-            >{k}</td>))}
-          </tr>
-          <tr>
-            {keys.map((k, key) => (<td
-              key={key}
+            >{k}</th>
+            {isObject && <td><ReactObjectTableViewer {...opt} data={val}/></td>}
+            {!isObject && <td
               style={{
                 whiteSpace: 'nowrap',
                 ...opt.valueStyle,
               }}
-            >{`${data[k]}`}</td>))}
-          </tr>
+            >{`${val}`}</td>}
+          </tr>;
+        })}
+        </tbody>
+      )}
+
+      {opt.layout === 'horizontal' && (
+        <>
+          <thead>
+          {keys.map((k, key) => (<th
+            key={key}
+            style={{
+              fontWeight: 'bold',
+              marginRight: 10,
+              ...opt.keyStyle,
+            }}
+          >{k}</th>))}
+          </thead>
+          <tbody>
+          {keys.map((k, key) => {
+            const val: any = data[k];
+            const isObject: boolean = typeof val === 'object';
+
+            return <>
+              {isObject && <td><ReactObjectTableViewer {...opt} data={val}/></td>}
+              {!isObject && <td
+                key={key}
+                style={{
+                  whiteSpace: 'nowrap',
+                  ...opt.valueStyle,
+                }}
+              >{`${val}`}</td>}
+            </>;
+          })}
+          </tbody>
         </>
       )}
-      </tbody>
     </table>
   );
 };
