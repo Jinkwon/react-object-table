@@ -2,8 +2,7 @@ import React, {
   CSSProperties,
   FC
 } from 'react';
-
-export type TableViewerLayoutType = 'vertical' | 'horizontal';
+import { TableViewerLayoutType } from './types';
 
 export interface PropTypes {
   data?: Record<string, unknown>;
