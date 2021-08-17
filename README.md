@@ -34,3 +34,6 @@ const App = () => {
   </>
 };
 ```
+
+# License
+MIT
