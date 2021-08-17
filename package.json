@@ -12,7 +12,7 @@
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",
     "build": "yarn run build:cjs && yarn run build:esm",
-    "deploy": "yarn run build && yarn run build:pages",
+    "deploy": "yarn run build && yarn run build:pages && gh-pages -d gh-pages",
     "dev": "next",
     "start": ""
   },
