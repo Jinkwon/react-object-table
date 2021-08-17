@@ -20,8 +20,8 @@
     "type": "git",
     "url": "git+https://github.com/Jinkwon/react-object-table-viewer.git"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "jinkwon.lee",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/Jinkwon/react-object-table-viewer/issues"
   },
