@@ -1,0 +1,58 @@
+{
+  "name": "react-object-table-viewer",
+  "version": "1.0.0",
+  "description": "react object table ui",
+  "main": "out/cjs",
+  "module": "esm",
+  "typings": "cjs/index.d.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "publish": "",
+    "build:pages": "rm -rf .next gh-phages && next build && next export -o gh-pages",
+    "build:cjs": "tsc -b tsconfig.cjs.json",
+    "build:esm": "tsc -b tsconfig.esm.json",
+    "build": "yarn run build:cjs && yarn run build:esm",
+    "deploy": "yarn run build && yarn run build:pages",
+    "dev": "next",
+    "start": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jinkwon/react-object-table-viewer.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jinkwon/react-object-table-viewer/issues"
+  },
+  "homepage": "https://github.com/Jinkwon/react-object-table-viewer#readme",
+  "dependencies": {
+    "global": "4.4.0",
+    "http-server": "13.0.0",
+    "react": "^17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "prettier": {
+    "semi": true,
+    "singleQuote": true
+  },
+  "devDependencies": {
+    "@babel/core": "7.15.0",
+    "@types/react": "17.0.18",
+    "@types/react-dom": "17.0.9",
+    "@typescript-eslint/eslint-plugin": "4.29.2",
+    "@typescript-eslint/parser": "4.29.2",
+    "eslint": "7.32.0",
+    "eslint-config-prettier": "8.3.0",
+    "eslint-plugin-prettier": "3.4.0",
+    "gh-pages": "3.2.3",
+    "next": "11.1.0",
+    "prettier": "2.3.2",
+    "ts-loader": "8.3.0",
+    "typescript": "4.3.5",
+    "webpack": "4.42.1",
+    "webpack-cli": "3.1.2",
+    "webpack-dev-middleware": "3.4.0",
+    "webpack-hot-middleware": "2.13.2"
+  }
+}
