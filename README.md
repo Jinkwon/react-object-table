@@ -1,4 +1,5 @@
 # react-object-table-viewer
+Object render to table viewer
 ### [Live Demo](https://jinkwon.github.io/react-object-table-viewer)
 
 # Installation
@@ -18,21 +19,18 @@ yarn add react-object-table-viewer
 import ReactObjectTableViewer from 'react-object-table-viewer';
 
 const App = () => {
+  const data = {
+    hello: 'world',
+    abc: 123,
+    array: ['1', '2', '3'],
+  };
+
   return <>
-    <ReactObjectTableViewer data={{
-      hello: 'world',
-      abc: 123,
-      object: {
-        a: 1,
-        b: 2,
-      },
-      array: ['1', '2', '3'],
-      objectArray: [{
-        a: 1,
-      }, {
-        b: 2
-      }]
-    }}/>
+    <ReactObjectTableViewer
+      style={{
+        fontSize: '14px',
+      }}
+      data={data}/>
   </>
 };
 ```

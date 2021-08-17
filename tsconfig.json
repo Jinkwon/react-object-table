@@ -25,6 +25,7 @@
     "noEmit": true
   },
   "include": [
+    "./files.d.ts",
     "**/*.ts",
     "**/*.tsx"
   ],

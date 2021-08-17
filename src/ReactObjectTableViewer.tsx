@@ -1,20 +1,23 @@
 import React, { FC } from 'react';
 
+export type TableViewerLayoutType = 'vertical' | 'horizontal';
+
 interface PropTypes {
   data?: Record<string, unknown>;
+  style?: any;
+  className?: string;
+  layout?: TableViewerLayoutType;
 }
 
 const ReactObjectTableViewer: FC<PropTypes> = (props: PropTypes) => {
   return (
     <table
-      className={''}
+      style={{
+        ...props.style,
+      }}
+      className={props.className}
     >
-      <tbody
-        style={{
-          userSelect: 'text',
-          cursor: 'text',
-        }}
-      >
+      <tbody>
       {Object.keys(props?.data || {}).map((k, key) => (
         <tr key={key}>
           <td
