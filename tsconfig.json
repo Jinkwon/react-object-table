@@ -14,7 +14,7 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": "./out",
+    "outDir": ".next",
     "lib": [
       "dom",
       "esnext"

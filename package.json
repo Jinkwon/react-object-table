@@ -1,6 +1,6 @@
 {
   "name": "react-object-table-viewer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "react object table ui",
   "main": "out/cjs",
   "module": "esm",
@@ -11,7 +11,7 @@
     "build:pages": "rm -rf .next gh-phages && next build && next export -o gh-pages",
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",
-    "build": "yarn run build:cjs && yarn run build:esm",
+    "build": "rm -rf out && yarn run build:cjs && yarn run build:esm",
     "deploy": "yarn run build && yarn run build:pages && gh-pages -d gh-pages",
     "dev": "next",
     "start": ""

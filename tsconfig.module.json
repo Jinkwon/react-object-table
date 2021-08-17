@@ -9,24 +9,18 @@
     "allowJs": true,
     "module": "esnext",
     "isolatedModules": true,
-    "jsx": "preserve",
+    "jsx": "react",
     "target": "es6",
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "moduleResolution": "node",
-    "outDir": ".next",
-    "lib": [
-      "dom",
-      "esnext"
-    ],
-    "skipLibCheck": true,
-    "strict": false,
-    "forceConsistentCasingInFileNames": true,
-    "noEmit": true
+    "baseUrl": "./src",
+    "outDir": "./out",
+    "lib": ["dom", "esnext"]
   },
   "include": [
-    "**/*.ts",
-    "**/*.tsx"
+    "src/**/*.ts",
+    "src/**/*.tsx"
   ],
   "exclude": [
     "node_modules",
