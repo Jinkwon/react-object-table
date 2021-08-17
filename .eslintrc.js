@@ -7,11 +7,11 @@ module.exports = {
   },
   ignorePatterns: ['.eslintrc.js'],
   plugins: [
-    '@typescript-eslint/eslint-plugin'
+    '@typescript-eslint'
   ],
   extends: [
+    'plugin:@next/next/recommended',
     'plugin:@typescript-eslint/recommended',
-    'plugin:prettier/recommended',
   ],
   env: {
     node: true,

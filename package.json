@@ -25,12 +25,24 @@
   "bugs": {
     "url": "https://github.com/Jinkwon/react-object-table-viewer/issues"
   },
-  "homepage": "https://github.com/Jinkwon/react-object-table-viewer#readme",
+  "homepage": "https://jinkwon.github.io/react-object-table-viewer",
   "dependencies": {
     "global": "4.4.0",
     "http-server": "13.0.0",
+    "husky": "7.0.1",
     "react": "^17.0.2",
     "react-dom": "17.0.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{ts,tsx}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "prettier": {
     "semi": true,
@@ -38,6 +50,7 @@
   },
   "devDependencies": {
     "@babel/core": "7.15.0",
+    "@next/eslint-plugin-next": "11.1.0",
     "@types/react": "17.0.18",
     "@types/react-dom": "17.0.9",
     "@typescript-eslint/eslint-plugin": "4.29.2",
@@ -46,6 +59,7 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.0",
     "gh-pages": "3.2.3",
+    "lint-staged": "11.1.2",
     "next": "11.1.0",
     "prettier": "2.3.2",
     "ts-loader": "8.3.0",
