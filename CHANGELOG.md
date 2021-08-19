@@ -1,5 +1,8 @@
 # CHANGELOG
 
+### v1.0.6
+- fix minimal dependencies
+
 ## v1.0.5
 - recursive data render
 
