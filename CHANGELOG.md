@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## v1.0.7
+- fix types path
+
 ### v1.0.6
 - fix minimal dependencies
 
