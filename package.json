@@ -2,11 +2,11 @@
   "name": "react-object-table-viewer",
   "author": "jinkwon.lee <uzmystic@gmail.com>",
   "license": "MIT",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "react object table ui",
   "main": "out/cjs",
   "module": "esm",
-  "types": "cjs/index.d.ts",
+  "types": "out/cjs/index.d.ts",
   "homepage": "https://jinkwon.github.io/react-object-table-viewer",
   "repository": {
     "type": "git",
