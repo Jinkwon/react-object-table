@@ -4,9 +4,9 @@
   "license": "MIT",
   "version": "1.0.5",
   "description": "react object table ui",
-  "main": "out/cjs",
+  "main": "out/esm",
   "module": "esm",
-  "types": "cjs/index.d.ts",
+  "types": "out/esm/index.d.ts",
   "homepage": "https://jinkwon.github.io/react-object-table-viewer",
   "repository": {
     "type": "git",
