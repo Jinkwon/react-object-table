@@ -2,11 +2,11 @@
   "name": "react-object-table-viewer",
   "author": "jinkwon.lee <uzmystic@gmail.com>",
   "license": "MIT",
-  "version": "1.0.5",
+  "version": "1.0.7",
   "description": "react object table ui",
-  "main": "out/esm",
+  "main": "out/cjs",
   "module": "esm",
-  "types": "out/esm/index.d.ts",
+  "types": "out/cjs/index.d.ts",
   "homepage": "https://jinkwon.github.io/react-object-table-viewer",
   "repository": {
     "type": "git",
@@ -27,9 +27,6 @@
     "start": ""
   },
   "dependencies": {
-    "global": "4.4.0",
-    "http-server": "13.0.1",
-    "husky": "7.0.2",
     "react": "^17.0.2",
     "react-dom": "17.0.2"
   },
@@ -44,6 +41,9 @@
     "eslint-config-prettier": "8.3.0",
     "eslint-plugin-prettier": "3.4.1",
     "gh-pages": "3.2.3",
+    "global": "4.4.0",
+    "http-server": "13.0.1",
+    "husky": "7.0.2",
     "lint-staged": "11.1.2",
     "next": "11.1.0",
     "prettier": "2.3.2",

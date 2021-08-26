@@ -38,8 +38,6 @@ const ReactObjectTableViewer: FC<PropTypes> = (props: PropTypes) => {
           return <tr key={key}>
             <th
               style={{
-                fontWeight: 'bold',
-                marginRight: 10,
                 ...opt.keyStyle,
               }}
             >{k}</th>
@@ -61,8 +59,6 @@ const ReactObjectTableViewer: FC<PropTypes> = (props: PropTypes) => {
           {keys.map((k, key) => (<th
             key={key}
             style={{
-              fontWeight: 'bold',
-              marginRight: 10,
               ...opt.keyStyle,
             }}
           >{k}</th>))}
