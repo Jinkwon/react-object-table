@@ -18,13 +18,14 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "publish": "",
-    "build:pages": "rm -rf .next gh-phages && next build && next export -o gh-pages",
+    "build:pages": "rm -rf .next gh-phages && next build && next export -o gh-pages && touch gh-pages/.nojekyll",
     "build:cjs": "tsc -b tsconfig.cjs.json",
     "build:esm": "tsc -b tsconfig.esm.json",
     "build": "rm -rf out && yarn run build:cjs && yarn run build:esm",
-    "deploy": "yarn run build && yarn run build:pages && gh-pages -d gh-pages",
+    "deploy": "yarn run clean && yarn run build && yarn run build:pages && gh-pages -d gh-pages -t true",
     "dev": "open http://localhost:3000/react-object-table-viewer && next",
-    "start": ""
+    "start": "",
+    "clean": "rimraf gh-pages && rimraf node_modules/.cache"
   },
   "dependencies": {
     "react": "17.0.2",

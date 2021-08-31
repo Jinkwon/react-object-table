@@ -1,5 +1,6 @@
 module.exports = {
-  basePath: '/react-object-table-viewer',
+  basePath: `/react-object-table-viewer`,
+  assetPrefix: `/react-object-table-viewer/`,
   compress: false,
   poweredByHeader: false,
   pageExtension: ['tsx', 'js'],
