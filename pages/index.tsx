@@ -5,7 +5,7 @@ import ReactObjectTableViewer from '../src';
 import packages from '../package.json';
 import CodeBlock from './components/CodeBlock';
 
-const index: FC = () => {
+const Index: FC = () => {
   const data = {
     hello: 'world',
     abc: 123,
@@ -99,4 +99,4 @@ export interface PropTypes {
 </>;
 };
 
-export default index;
+export default Index;
