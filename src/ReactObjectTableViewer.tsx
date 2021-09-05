@@ -54,21 +54,21 @@ const ReactObjectTableViewer: FC<PropTypes> = (props: PropTypes) => {
       )}
 
       {opt.layout === 'horizontal' && (
-        <>
-          <thead>
+        <tbody>
+          <tr>
           {keys.map((k, key) => (<th
             key={key}
             style={{
               ...opt.keyStyle,
             }}
           >{k}</th>))}
-          </thead>
-          <tbody>
+          </tr>
+          <tr>
           {keys.map((k, key) => {
             const val: any = data[k];
             const isObject: boolean = typeof val === 'object';
 
-            return <>
+            return <React.Fragment key={key}>
               {isObject && <td><ReactObjectTableViewer {...opt} data={val}/></td>}
               {!isObject && <td
                 key={key}
@@ -77,10 +77,10 @@ const ReactObjectTableViewer: FC<PropTypes> = (props: PropTypes) => {
                   ...opt.valueStyle,
                 }}
               >{`${val}`}</td>}
-            </>;
+            </React.Fragment>;
           })}
-          </tbody>
-        </>
+          </tr>
+        </tbody>
       )}
     </table>
   );
